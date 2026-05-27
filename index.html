@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OYA Strategies — Cultural Consulting | Janeen Johnson</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --purple: #390da5;
+    --green: #278354;
+    --orange: #ff7124;
+    --dark: #1e1e1e;
+    --mid: #5a5a5a;
+    --light: #f5f4f0;
+    --border: #e0ddd8;
+    --bg: #efeeeb;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--purple) 33.3%, var(--green) 33.3% 66.6%, var(--orange) 66.6%);
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 0 56px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo img {
+    height: 42px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .nav-links a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--mid);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--dark); }
+  .nav-cta {
+    background: var(--purple) !important;
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 3px;
+    letter-spacing: 0.12em !important;
+  }
+  .nav-cta:hover { background: #2d0a84 !important; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--dark);
+    padding: 104px 56px 96px;
+  }
+  .hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .hero .eyebrow { color: var(--green); }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 700;
+    color: white;
+    line-height: 1.08;
+    margin-bottom: 26px;
+  }
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 44px;
+  }
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 15px 34px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: #1e6641; }
+  .btn-ghost {
+    display: inline-block;
+    color: rgba(255,255,255,0.45);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 2px;
+    transition: color 0.15s, border-color 0.15s;
+    letter-spacing: 0.04em;
+  }
+  .btn-ghost:hover { color: white; border-color: rgba(255,255,255,0.6); }
+
+  /* ── SHARED SECTION ── */
+  section { padding: 88px 56px; }
+  .section-inner { max-width: 840px; margin: 0 auto; }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--green);
+    margin-bottom: 14px;
+  }
+  section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  /* ── ABOUT ── */
+  .about { background: var(--bg); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 72px;
+    align-items: start;
+    margin-top: 8px;
+  }
+  .about-body p {
+    font-size: 14.5px;
+    color: var(--dark);
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+  .about-body p:last-child { margin-bottom: 0; }
+  .about-aside { padding-top: 4px; }
+  .pull-quote {
+    border-left: 3px solid var(--orange);
+    padding: 20px 24px;
+    background: white;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 32px;
+  }
+  .pull-quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 14.5px;
+    font-style: italic;
+    color: var(--dark);
+    line-height: 1.65;
+  }
+  .stat-stack { display: flex; flex-direction: column; gap: 24px; }
+  .stat-item {}
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--purple);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid);
+    font-weight: 500;
+  }
+
+  /* ── SPRINT ── */
+  .sprint { background: white; }
+  .sprint-intro {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 52px;
+  }
+  .archetypes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+  .archetype-card {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 30px 32px;
+  }
+  .archetype-tag {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 14px;
+  }
+  .tag-build { background: #f0ecfd; color: var(--purple); }
+  .tag-stabilize { background: #e8f5ee; color: var(--green); }
+  .archetype-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .archetype-body { font-size: 13px; color: var(--mid); line-height: 1.75; }
+
+  .deliverable-block {
+    background: var(--bg);
+    border-radius: 4px;
+    padding: 36px 40px;
+    margin-bottom: 44px;
+  }
+  .deliverable-tag {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--mid);
+    margin-bottom: 10px;
+  }
+  .deliverable-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .deliverable-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 32px;
+    list-style: none;
+  }
+  .deliverable-grid li {
+    font-size: 13px;
+    color: var(--dark);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .deliverable-grid li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  .investment-row {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  .investment-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  .investment-detail {
+    font-size: 12.5px;
+    color: var(--mid);
+    line-height: 1.7;
+  }
+  .btn-purple {
+    display: inline-block;
+    background: var(--purple);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 15px 34px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .btn-purple:hover { background: #2d0a84; }
+
+  /* ── DIAGNOSTIC ── */
+  .diagnostic-section { background: var(--light); }
+  .diagnostic-intro {
+    font-size: 14.5px;
+    color: var(--mid);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 44px;
+  }
+  .diagnostic-card {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 28px rgba(0,0,0,0.08);
+    max-width: 560px;
+  }
+  .diag-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--purple) 33.3%, var(--green) 33.3% 66.6%, var(--orange) 66.6%);
+  }
+  .diag-form-body { padding: 36px 40px 40px; }
+
+  .q-block { margin-bottom: 28px; }
+  .q-block:last-of-type { margin-bottom: 0; }
+  .q-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--purple);
+    margin-bottom: 8px;
+  }
+  .q-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.35;
+    margin-bottom: 14px;
+  }
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .option:hover { border-color: var(--purple); background: #f4f0fd; }
+  .option input[type="radio"] {
+    accent-color: var(--purple);
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+  .option input[type="radio"]:checked + .opt-text { color: var(--purple); font-weight: 500; }
+  .opt-text { font-size: 13px; color: var(--dark); }
+  .other-input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--dark);
+    resize: vertical;
+    min-height: 72px;
+    background: white;
+    transition: border-color 0.15s;
+    margin-top: 10px;
+    display: none;
+  }
+  .other-input:focus { outline: none; border-color: var(--purple); }
+  .other-input::placeholder { color: #bbb; font-style: italic; }
+
+  .diag-email-block {
+    margin-top: 28px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+  .diag-email-label { font-size: 12px; font-weight: 600; color: var(--dark); margin-bottom: 6px; }
+  .diag-email-note { font-size: 11px; color: var(--mid); margin-bottom: 12px; font-style: italic; line-height: 1.6; }
+  .diag-email-input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--dark);
+    background: white;
+    transition: border-color 0.15s;
+  }
+  .diag-email-input:focus { outline: none; border-color: var(--purple); }
+  .diag-email-input::placeholder { color: #bbb; }
+
+  .diag-submit-block { margin-top: 20px; }
+  .diag-submit-btn {
+    width: 100%;
+    background: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .diag-submit-btn:hover { background: #2d0a84; }
+  .diag-submit-note {
+    font-size: 10.5px;
+    color: var(--mid);
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  .diag-thankyou {
+    display: none;
+    padding: 44px 40px;
+    text-align: center;
+  }
+  .ty-icon {
+    width: 46px; height: 46px;
+    background: var(--green);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 18px;
+    color: white; font-size: 20px;
+  }
+  .diag-thankyou h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+  .diag-thankyou p {
+    font-size: 13px; color: var(--mid); line-height: 1.65;
+    max-width: 360px; margin: 0 auto 22px;
+  }
+  .ty-cta {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 12px 26px; border-radius: 3px; text-decoration: none;
+  }
+
+  /* ── CONTACT ── */
+  .contact { background: var(--dark); }
+  .contact .section-label { color: rgba(255,255,255,0.35); }
+  .contact h2 { color: white; }
+  .contact-body {
+    font-size: 15px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 44px;
+  }
+  .contact-rows { display: flex; flex-direction: column; gap: 16px; }
+  .contact-row { display: flex; align-items: center; gap: 16px; }
+  .contact-type {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(255,255,255,0.25);
+    width: 80px;
+    flex-shrink: 0;
+  }
+  .contact-value {
+    font-size: 14.5px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 2px;
+    transition: border-color 0.15s;
+  }
+  .contact-value:hover { border-color: rgba(255,255,255,0.5); }
+  .contact-muted {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    font-style: italic;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #111;
+    padding: 28px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-brand { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.15s;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.6); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav, section, .hero, footer { padding-left: 24px; padding-right: 24px; }
+    nav .nav-links a:not(.nav-cta) { display: none; }
+    .hero { padding-top: 72px; padding-bottom: 64px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .archetypes { grid-template-columns: 1fr; }
+    .deliverable-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-logo">
+    <img src="oya-logo.png" alt="OYA Strategies">
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#sprint">The Sprint</a>
+    <a href="#contact">Contact</a>
+    <a href="/diagnostic.html" class="nav-cta">Take the Diagnostic</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">OYA Strategies &nbsp;·&nbsp; Cultural Consulting</div>
+    <h1>From Vision<br>to Vessel.</h1>
+    <p class="hero-sub">We build the structure and systems that carry purposeful cultural work across generations.</p>
+    <div class="hero-actions">
+      <a href="/diagnostic.html" class="btn-primary">Take the Diagnostic &rarr;</a>
+      <a href="#sprint" class="btn-ghost">Learn about the Sprint &darr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <div class="about-grid">
+      <div class="about-body">
+        <h2>Twenty years<br>in the room.</h2>
+        <p>I've been working inside cultural organizations and alongside visionary founders, cultural leaders, and practitioners doing purposeful work since 2003. In that time, I've watched the same gap appear again and again — organizations dissolving before their time, work that couldn't fund itself, impact that was real but couldn't scale, deepen, or endure. A meaningful vision. An undeniable passion. Masterful artistry. And yet something essential was missing — not just unknown to the people surrounding the work, but sometimes to the people doing it.</p>
+        <p>That gap has a name: stewardship. Not oversight or management — the framework that allows meaningful work to be funded, sustained, and built to outlast the people driving it. Closing it isn't about making the work smaller or more palatable. It's about building what was missing — the structure, the systems, and the organizational foundation that allow meaningful work to be held, deepened, and carried across generations.</p>
+        <p>I partner with people who are building institutions and those committed to fortifying the work — both ready to make sure what they've built can outlast them. OYA Strategies exists for that work. I work with a deliberate few — each engagement deep, specific, and without shortcuts.</p>
+        <p style="font-size:12.5px;color:var(--mid);font-style:italic;margin-top:4px;">Twenty years of this work. OYA Strategies is what it built.</p>
+      </div>
+      <div class="about-aside">
+        <div class="pull-quote">
+          <div class="pull-quote-text" style="font-style:normal;font-weight:700;font-size:15px;letter-spacing:0.04em;margin-bottom:8px;">Endurance Over Expansion.</div>
+          <div class="pull-quote-text">Strength, cohesion, and longevity — not growth for its own sake. Work built to be held, deepened, and carried across generations.</div>
+        </div>
+        <div class="stat-stack">
+          <div class="stat-item">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Years in the room</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">30</div>
+            <div class="stat-label">Days. One Sprint. Built to last.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Sprint -->
+<section class="sprint" id="sprint">
+  <div class="section-inner">
+    <div class="section-label">The OYA Signature Sprint</div>
+    <h2>Thirty days.<br>One deliverable.<br>Everything changes.</h2>
+    <p class="sprint-intro">The Sprint is a 30-day intensive engagement for visionary founders, cultural leaders, and practitioners who are serious about building institutions or fortifying work with the intention to strengthen, deepen, or endure. It produces a Stewardship Blueprint — a guide for clarity around your vision, your audience, your message, and the path forward. It's what structured vision looks like.</p>
+
+    <div class="archetypes">
+      <div class="archetype-card">
+        <div class="archetype-tag tag-build">Build</div>
+        <div class="archetype-title">Starting something new from the ground up</div>
+        <div class="archetype-body">The vision is clear. The structure doesn't exist yet. We build it together — from concept to first rollout, with a structure the work can stand on.</div>
+      </div>
+      <div class="archetype-card">
+        <div class="archetype-tag tag-stabilize">Stabilize</div>
+        <div class="archetype-title">Evolving work that exists but can't sustain itself</div>
+        <div class="archetype-body">You have real work that's struggling to grow, fund, or sustain itself. We diagnose what's holding it back and build the path forward.</div>
+      </div>
+    </div>
+
+    <div class="deliverable-block">
+      <div class="deliverable-tag">What You Walk Away With — The Stewardship Blueprint</div>
+      <div class="deliverable-title">After 30 days: what you gain.</div>
+      <ul class="deliverable-grid">
+        <li>A single sentence that captures your work</li>
+        <li>Clarity on the vision and the intention behind it</li>
+        <li>Certainty about what you're building and for whom</li>
+        <li>Your story, mission, and voice — shaped into a public-facing message</li>
+        <li>The people who should see your work first — named and in order</li>
+        <li>A clear-eyed diagnosis of the gaps — with specific recommendations for each</li>
+        <li>A rollout strategy built around alignment and order — the right people, in the right sequence</li>
+        <li>A roadmap for what comes after — the next chapter, not just the next step</li>
+      </ul>
+    </div>
+
+    <div class="investment-row">
+      <div class="investment-price">$3,000</div>
+      <div class="investment-detail">$1,500 at signing &nbsp;·&nbsp; $1,500 at Day 15<br>30-day engagement &nbsp;·&nbsp; One at a time. By design.</div>
+    </div>
+
+    <a href="/diagnostic.html" class="btn-purple">Begin with clarity &rarr;</a>
+    <p style="font-size:12px;color:#5a5a5a;font-style:italic;margin-top:12px;">It's free. No commitment required.</p>
+  </div>
+</section>
+
+<!-- Diagnostic -->
+<section class="diagnostic-section" id="diagnostic">
+  <div class="section-inner">
+    <div class="section-label">Before You Begin</div>
+    <h2>A moment of clarity<br>before you begin.</h2>
+    <p class="diagnostic-intro">Three questions. Five minutes. A clear read on where you are — and what the work needs next.</p>
+
+    <div class="diagnostic-card">
+      <div class="diag-bar"></div>
+
+      <div class="diag-form-body" id="diagForm">
+
+        <div class="q-block">
+          <div class="q-label">Question 01</div>
+          <div class="q-text">Can you describe your work in one sentence — without using the word "community"?</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q1" value="yes"><span class="opt-text">Yes — clearly and confidently</span></label>
+            <label class="option"><input type="radio" name="q1" value="working"><span class="opt-text">Still working on it</span></label>
+            <label class="option"><input type="radio" name="q1" value="no"><span class="opt-text">Not yet — this is harder than I expected</span></label>
+          </div>
+        </div>
+
+        <div class="q-block">
+          <div class="q-label">Question 02</div>
+          <div class="q-text">Where are you right now with this work?</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q2" value="building"><span class="opt-text">Building something new from the ground up</span></label>
+            <label class="option"><input type="radio" name="q2" value="stabilizing"><span class="opt-text">Stabilizing or evolving existing work</span></label>
+            <label class="option"><input type="radio" name="q2" value="both"><span class="opt-text">Both — it's complicated</span></label>
+          </div>
+        </div>
+
+        <div class="q-block">
+          <div class="q-label">Question 03</div>
+          <div class="q-text">What's the biggest gap right now?</div>
+          <div class="options">
+            <label class="option"><input type="radio" name="q3" value="structure"><span class="opt-text">I have the vision but haven't built the structure yet</span></label>
+            <label class="option"><input type="radio" name="q3" value="sustain"><span class="opt-text">I have the work but can't sustain or fund what comes next</span></label>
+            <label class="option"><input type="radio" name="q3" value="systems"><span class="opt-text">Everything runs through me — nothing works without me</span></label>
+            <label class="option"><input type="radio" name="q3" value="other" onchange="toggleOther()"><span class="opt-text">Other</span></label>
+          </div>
+          <textarea class="other-input" id="otherText" placeholder="Tell us more..."></textarea>
+        </div>
+
+        <div class="diag-email-block">
+          <div class="diag-email-label">Want to go deeper?</div>
+          <div class="diag-email-note">Something surfaced here. Good — that's where the work begins. Whether you're building something new or fortifying what exists, the work goes deeper. Enter your email and receive <em>5 Principles for Building Work That Lasts</em> — a free guide from OYA Strategies.</div>
+          <input type="email" class="diag-email-input" id="diagEmail" placeholder="Your email address">
+        </div>
+
+        <div class="diag-submit-block">
+          <button class="diag-submit-btn" onclick="handleSubmit()">Yes — I Want More Clarity</button>
+          <div class="diag-submit-note">Free. No noise. Unsubscribe anytime.</div>
+        </div>
+
+      </div>
+
+      <div class="diag-thankyou" id="diagThankyou">
+        <div class="ty-icon">&#10003;</div>
+        <h3>Your guide is on its way.</h3>
+        <p>Five principles. Real clarity. A framework from vision to vessel. Want to go deeper now? The OYA Substack is where I share what's happening in the sector and what it takes to steward purposeful work across generations.</p>
+        <a class="ty-cta" href="https://janeenjohnson.substack.com">Join the OYA Community</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <h2>Ready to talk?</h2>
+    <p class="contact-body">Discovery conversations are 45 minutes. They're free. And they're only for people who are serious about building work that lasts. Start with the diagnostic above — then reach out.</p>
+    <div class="contact-rows">
+      <div class="contact-row">
+        <span class="contact-type">Email</span>
+        <a href="mailto:oyastrategies@gmail.com" class="contact-value">oyastrategies@gmail.com</a>
+      </div>
+      <div class="contact-row">
+        <span class="contact-type">Book</span>
+        <span class="contact-muted">Discovery call scheduling — coming soon</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-type">Community</span>
+        <a href="https://janeenjohnson.substack.com" class="contact-value">janeenjohnson.substack.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-brand">OYA Strategies &nbsp;·&nbsp; Janeen Johnson &nbsp;·&nbsp; Cultural Architect &nbsp;·&nbsp; &copy; 2026</div>
+  <div class="footer-links">
+    <a href="https://janeenjohnson.substack.com">Substack</a>
+    <a href="mailto:oyastrategies@gmail.com">Email</a>
+    <a href="/diagnostic.html">Take the Diagnostic</a>
+  </div>
+</footer>
+
+<script>
+  function toggleOther() {
+    const t = document.getElementById('otherText');
+    t.style.display = 'block';
+    t.focus();
+  }
+  function handleSubmit() {
+    const email = document.getElementById('diagEmail').value;
+    if (!email || !email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    document.getElementById('diagForm').style.display = 'none';
+    document.getElementById('diagThankyou').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
