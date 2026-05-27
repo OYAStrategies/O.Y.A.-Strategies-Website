@@ -50,7 +50,7 @@
     justify-content: space-between;
   }
   .nav-logo img {
-    height: 54px;
+    height: 68px;
     width: auto;
     display: block;
   }
@@ -523,6 +523,44 @@
     font-style: italic;
   }
 
+  /* ── STATS BAND ── */
+  .stats-band {
+    background: var(--dark);
+    padding: 64px 56px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats-band-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    align-items: center;
+  }
+  .stat-col { padding: 0 48px; }
+  .stat-col:first-child { padding-left: 0; }
+  .stat-col:last-child { padding-right: 0; }
+  .stat-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.1);
+    height: 64px;
+    justify-self: center;
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--purple);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-lbl {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+  }
+
   /* ── FOOTER ── */
   footer {
     background: #111;
@@ -534,6 +572,7 @@
     gap: 12px;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
+  .footer-logo img { height: 36px; width: auto; opacity: 0.6; display: block; }
   .footer-brand { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; }
   .footer-links { display: flex; gap: 24px; }
   .footer-links a {
@@ -554,6 +593,10 @@
     .archetypes { grid-template-columns: 1fr; }
     .deliverable-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; align-items: flex-start; }
+    .stats-band { padding: 48px 24px; }
+    .stats-band-inner { grid-template-columns: 1fr; gap: 32px; }
+    .stat-divider { display: none; }
+    .stat-col { padding: 0; }
   }
 </style>
 </head>
@@ -586,6 +629,26 @@
     </div>
   </div>
 </section>
+
+<!-- Stats Band -->
+<div class="stats-band">
+  <div class="stats-band-inner">
+    <div class="stat-col">
+      <div class="stat-num">20+</div>
+      <div class="stat-lbl">Years in the room</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-col">
+      <div class="stat-num">30</div>
+      <div class="stat-lbl">Days. One Sprint. Built to last.</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-col">
+      <div class="stat-num">1</div>
+      <div class="stat-lbl">One at a time. By design.</div>
+    </div>
+  </div>
+</div>
 
 <!-- About -->
 <section class="about" id="about">
@@ -761,6 +824,9 @@
 
 <!-- Footer -->
 <footer>
+  <div class="footer-logo">
+    <img id="footer-logo-img" alt="OYA Strategies">
+  </div>
   <div class="footer-brand">OYA Strategies &nbsp;·&nbsp; Janeen Johnson &nbsp;·&nbsp; Cultural Architect &nbsp;·&nbsp; &copy; 2026</div>
   <div class="footer-links">
     <a href="https://janeenjohnson.substack.com">Substack</a>
@@ -770,6 +836,9 @@
 </footer>
 
 <script>
+  // Copy nav logo src to footer logo to avoid duplicating the base64 string
+  document.getElementById('footer-logo-img').src = document.querySelector('.nav-logo img').src;
+
   function toggleOther() {
     const t = document.getElementById('otherText');
     t.style.display = 'block';
