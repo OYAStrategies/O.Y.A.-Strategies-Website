@@ -392,7 +392,7 @@
 
     <!-- Header -->
     <div class="card-header">
-      <div class="header-text">
+      <div class="header-text" id="diagHeaderText">
         <div class="eyebrow">Free Resource &#8212; OYA Strategies</div>
         <h1>A moment of clarity before you begin.</h1>
         <div class="subhead">Three questions. Five minutes. A clear read on where you are &#8212; and what the work needs next.</div>
@@ -600,6 +600,7 @@
       document.getElementById('tierPrinciples').textContent = tier.principles;
 
       document.getElementById('formBody').style.display = 'none';
+      document.getElementById('diagHeaderText').style.display = 'none';
       document.getElementById('resultsBody').style.display = 'block';
       window.scrollTo(0, 0);
     }
