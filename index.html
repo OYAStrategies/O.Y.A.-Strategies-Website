@@ -349,7 +349,10 @@
     border-radius: 6px;
     padding: 32px 28px;
     background: white;
+    display: flex;
+    flex-direction: column;
   }
+  .tier-cta-block { margin-top: auto; padding-top: 20px; }
   .tier-featured {
     border-color: var(--purple);
     border-top: 3px solid var(--purple);
@@ -832,7 +835,9 @@
           <li>Clarity on the next move — named and sequenced</li>
           <li>Written blueprint delivered</li>
         </ul>
-        <a href="diagnostic.html" class="tier-cta tier-cta-orange">Take the Assessment &rarr;</a>
+        <div class="tier-cta-block">
+          <a href="diagnostic.html" class="tier-cta tier-cta-orange">Take the Assessment &rarr;</a>
+        </div>
       </div>
 
       <!-- Tier 2 — Build (featured) -->
@@ -849,11 +854,13 @@
           <li>Vision, audience, message, and rollout — all defined</li>
           <li>One client at a time. Intensive start, transitions to delivery</li>
         </ul>
-        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-          <a href="intake.html" class="tier-cta tier-cta-primary">Begin with clarity &rarr;</a>
-          <a href="sprint.html" style="font-size:12px;color:var(--purple);font-weight:500;text-decoration:none;border-bottom:1px solid var(--purple);padding-bottom:1px;">Learn more &rarr;</a>
+        <div class="tier-cta-block">
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:10px;">
+            <a href="intake.html" class="tier-cta tier-cta-primary">Begin with clarity &rarr;</a>
+            <a href="sprint.html" style="font-size:12px;color:var(--purple);font-weight:500;text-decoration:none;border-bottom:1px solid var(--purple);padding-bottom:1px;">Learn more &rarr;</a>
+          </div>
+          <p style="font-size:11.5px;color:var(--mid);font-style:italic;">Start with the free assessment. No commitment required.</p>
         </div>
-        <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:10px;">Start with the free assessment. No commitment required.</p>
       </div>
 
       <!-- Tier 3 — Sustain -->
@@ -870,7 +877,9 @@
           <li>Defined milestone documents</li>
           <li>Weekly &rarr; bi-weekly &rarr; monthly cadence</li>
         </ul>
-        <a href="mailto:janeen@oyastrategies.com" class="tier-cta tier-cta-green">Inquire &rarr;</a>
+        <div class="tier-cta-block">
+          <a href="mailto:janeen@oyastrategies.com" class="tier-cta tier-cta-green">Inquire &rarr;</a>
+        </div>
       </div>
 
     </div>
