@@ -723,7 +723,34 @@
     .stats-band-inner { grid-template-columns: 1fr; gap: 32px; }
     .stat-divider { display: none; }
     .stat-col { padding: 0; }
+    .founder-inner { grid-template-columns: 1fr; }
+    .founder-photo-col { max-height: 280px; overflow: hidden; }
+    .founder-text { padding: 32px 24px; }
   }
+
+  /* ── FOUNDER BAND ── */
+  .founder { background: #ffffff; padding: 0; overflow: hidden; }
+  .founder-inner {
+    max-width: 100%; margin: 0;
+    display: grid; grid-template-columns: 480px 1fr;
+    gap: 0; align-items: stretch;
+  }
+  .founder-photo-col { position: relative; overflow: hidden; }
+  .founder-photo-col img {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center 8%;
+    transform: scaleX(-1);
+  }
+  .founder-text { padding: 60px 56px 0 64px; }
+  .founder-text .section-label { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 600; color: var(--green); margin-bottom: 12px; }
+  .founder-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3vw, 34px); font-weight: 700; color: var(--dark); line-height: 1.15; margin-bottom: 22px; }
+  .founder-text p { font-size: 13.5px; color: var(--mid); line-height: 1.85; margin-bottom: 16px; }
+  .founder-pull { border-top: 1px solid var(--border); padding: 18px 0 0 0; margin: 22px 0; }
+  .founder-pull-text { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--purple); }
+  .founder-pull-text a { color: inherit; text-decoration: none; }
+  .founder-byline { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); font-weight: 500; line-height: 1.8; padding-top: 18px; padding-bottom: 0; border-top: 1px solid var(--border); }
+  .founder { border-bottom: 1px solid var(--border); }
 </style>
 </head>
 <body>
@@ -808,6 +835,28 @@
             <div class="stat-label">One at a time. By design.</div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOUNDER BAND ── -->
+<section class="founder" id="founder">
+  <div class="founder-inner">
+    <div class="founder-photo-col">
+      <img src="janeen-float.png" alt="Janeen Johnson, Founder — OYA Strategies">
+    </div>
+    <div class="founder-text">
+      <div class="section-label">The Founder</div>
+      <h2>I didn't set out<br>to become this.</h2>
+      <p>I design the systems that allow the work to survive its founder.</p>
+      <p>Not because I studied it. Because I've lived inside what happens when those systems aren't there — and I built anyway. I know what it costs when structure is missing, and I know how to build it under pressure. Twenty years across organizations, stages, and communities taught me that talent and commitment alone aren't enough — they need structure and systems to sustain the work.</p>
+      <p>What I bring to every engagement is earned, not theoretical: the depth of cultural stewardship and a clear-eyed understanding of what it takes for the work to outlast the people who built it. When you work with me, you get someone who builds what holds — without losing what made the work worth preserving.</p>
+      <div class="founder-pull">
+        <div class="founder-pull-text"><a href="about.html">Meet Janeen →</a></div>
+      </div>
+      <div class="founder-byline">
+        Janeen Johnson &nbsp;·&nbsp; Founder &amp; Cultural Architect &nbsp;·&nbsp; OYA Strategies
       </div>
     </div>
   </div>
