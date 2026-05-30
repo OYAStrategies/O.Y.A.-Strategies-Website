@@ -723,9 +723,6 @@
     .stats-band-inner { grid-template-columns: 1fr; gap: 32px; }
     .stat-divider { display: none; }
     .stat-col { padding: 0; }
-    .founder-inner { grid-template-columns: 1fr; }
-    .founder-photo-col { max-height: 280px; overflow: hidden; }
-    .founder-text { padding: 32px 24px; }
   }
 
   /* ── FOUNDER BAND ── */
@@ -751,6 +748,13 @@
   .founder-pull-text a { color: inherit; text-decoration: none; }
   .founder-byline { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mid); font-weight: 500; line-height: 1.8; padding-top: 18px; padding-bottom: 0; border-top: 1px solid var(--border); }
   .founder { border-bottom: 1px solid var(--border); }
+  @media (max-width: 768px) {
+    .founder-inner { grid-template-columns: 1fr; }
+    .founder-photo-col { height: 320px; max-height: 320px; }
+    .founder-text { padding: 32px 24px; }
+    .founder-pull { margin: 16px 0 0 0; }
+    .founder-byline { border-top: none; padding-top: 8px; }
+  }
 </style>
 </head>
 <body>
