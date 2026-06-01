@@ -1002,9 +1002,10 @@
 
       <div class="diag-thankyou" id="diagThankyou">
         <div class="ty-icon">&#10003;</div>
-        <h3>Your guide is on its way.</h3>
-        <p>Five principles. Real clarity. A framework from vision to vessel. Want to go deeper now? The O.Y.A. Substack is where I share what's happening in the sector and what it takes to steward purposeful work across generations.</p>
-        <a class="ty-cta" href="https://janeenjohnson.substack.com" target="_blank" rel="noopener noreferrer">Join the O.Y.A. Community</a>
+        <h3>Here are your 5 Principles.</h3>
+        <p>A framework from vision to vessel — five principles for building work that lasts. Read it now, or save it for when you're ready to go deeper.</p>
+        <a class="ty-cta" href="/OYA-5-Principles.pdf" target="_blank" rel="noopener noreferrer">Read the 5 Principles &rarr;</a>
+        <p style="font-size:12px;color:var(--mid);margin-top:16px;">Want ongoing insight? <a href="https://janeenjohnson.substack.com" target="_blank" rel="noopener noreferrer" style="color:var(--purple);text-decoration:none;">Join the O.Y.A. Substack &rarr;</a></p>
       </div>
 
     </div>
@@ -1076,8 +1077,20 @@
       alert('Please enter a valid email address.');
       return;
     }
-    document.getElementById('diagForm').style.display = 'none';
-    document.getElementById('diagThankyou').style.display = 'block';
+    fetch('https://api.convertkit.com/v3/forms/9492531/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ api_key: 'PxkLtP0J83FkAOImmEJhdA', email: email })
+    })
+    .then(function() {
+      document.getElementById('diagForm').style.display = 'none';
+      document.getElementById('diagThankyou').style.display = 'block';
+    })
+    .catch(function(err) {
+      console.error('ConvertKit error:', err);
+      document.getElementById('diagForm').style.display = 'none';
+      document.getElementById('diagThankyou').style.display = 'block';
+    });
   }
 </script>
 
