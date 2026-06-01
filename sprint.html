@@ -95,16 +95,22 @@
   /* DELIVERABLE */
   .deliverable { background: var(--bg); }
   .deliverable-inner { max-width: 800px; }
-  .deliverable-block {
-    background: white; border-radius: 6px; padding: 40px 44px; margin-top: 8px;
-    border-left: 3px solid var(--purple);
-  }
-  .deliverable-subtitle { font-size: 13px; color: var(--mid); line-height: 1.8; margin-bottom: 28px; max-width: 560px; }
+  .deliverable-block { margin-top: 8px; }
+  .deliverable-subtitle { font-size: 13px; color: var(--mid); line-height: 1.8; margin-bottom: 24px; max-width: 560px; }
   .deliverable-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 10px 36px; list-style: none;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none;
+    counter-reset: deliverable;
   }
-  .deliverable-grid li { font-size: 13px; color: var(--dark); padding-left: 18px; position: relative; line-height: 1.55; }
-  .deliverable-grid li::before { content: '—'; position: absolute; left: 0; color: var(--green); font-weight: 600; }
+  .deliverable-grid li {
+    background: white; border: 1px solid var(--border); border-radius: 4px;
+    padding: 20px; font-size: 13px; color: var(--dark); line-height: 1.6;
+    counter-increment: deliverable;
+  }
+  .deliverable-grid li::before {
+    content: counter(deliverable, decimal-leading-zero);
+    display: block; font-size: 9px; letter-spacing: 0.2em; font-weight: 600;
+    color: var(--purple); margin-bottom: 8px;
+  }
 
   /* INVESTMENT */
   .investment { background: white; }
@@ -156,6 +162,8 @@
     .footer-meta { text-align: left; }
     .footer-links { justify-content: flex-start; }
     .footer-logo img { height: 60px; }
+    .deliverable-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .deliverable-grid li { padding: 14px 12px; font-size: 12.5px; }
   }
 </style>
 </head>
