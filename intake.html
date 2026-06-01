@@ -475,6 +475,14 @@
       return el && el.value.trim() ? el.value.trim() : '(not answered)';
     }
 
+    function showThankYou() {
+      document.getElementById('intakeForm').style.display = 'none';
+      document.getElementById('headerText').style.display = 'none';
+      document.getElementById('introBlock').style.display = 'none';
+      document.getElementById('thankYou').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+
     function submitApplication() {
       var email = val('f10');
       if (email === '(not answered)' || email.indexOf('@') === -1) {
@@ -486,7 +494,7 @@
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      emailjs.send('service_y2huiog', 'template_gvkgvbq', {
+      var params = {
         from_name: val('f1'),
         from_email: email,
         f1: val('f1'),
@@ -498,17 +506,25 @@
         f7: val('f7'),
         f8: val('f8'),
         f9: val('f9')
-      }).then(function() {
-        document.getElementById('intakeForm').style.display = 'none';
-        document.getElementById('headerText').style.display = 'none';
-        document.getElementById('introBlock').style.display = 'none';
-        document.getElementById('thankYou').style.display = 'block';
-        window.scrollTo(0, 0);
-      }, function() {
+      };
+
+      try {
+        emailjs.send('service_y2huiog', 'template_gvkgvbq', params)
+          .then(function() {
+            showThankYou();
+          })
+          .catch(function(err) {
+            console.error('EmailJS send failed:', err);
+            btn.textContent = 'Submit Application →';
+            btn.disabled = false;
+            alert('Something went wrong sending your application. Please email janeen@oyastrategies.com directly.');
+          });
+      } catch (e) {
+        console.error('EmailJS error:', e);
         btn.textContent = 'Submit Application →';
         btn.disabled = false;
-        alert('Something went wrong. Please try again or email janeen@oyastrategies.com directly.');
-      });
+        alert('Something went wrong. Please email janeen@oyastrategies.com directly with your responses.');
+      }
     }
   </script>
 
