@@ -129,6 +129,23 @@
   .body-copy p em { color: var(--dark); font-style: italic; }
   .body-copy p strong { color: var(--dark); font-weight: 600; }
 
+  /* ── BODY PULL QUOTE ── */
+  .body-pull-quote {
+    border-top: 2px solid var(--green);
+    border-bottom: 1px solid var(--border);
+    padding: 26px 0;
+    margin: 10px 0 28px;
+  }
+  .body-pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(17px, 2vw, 21px) !important;
+    font-style: italic;
+    color: var(--purple) !important;
+    line-height: 1.5 !important;
+    margin-bottom: 6px !important;
+  }
+  .body-pull-quote p:last-child { margin-bottom: 0 !important; }
+
   /* ── ASIDE ELEMENTS ── */
   .aside-block {
     display: flex; flex-direction: column; gap: 28px;
@@ -177,11 +194,11 @@
     font-weight: 600; color: var(--orange); margin-bottom: 6px;
   }
   .framework-item-title {
-    font-size: 13px; font-weight: 600; color: var(--dark);
+    font-size: 14px; font-weight: 600; color: var(--dark);
     margin-bottom: 6px;
   }
   .framework-item-desc {
-    font-size: 12.5px; color: var(--mid); line-height: 1.7;
+    font-size: 14px; color: var(--mid); line-height: 1.7;
   }
 
   /* ── PHOTO SECTION ── */
@@ -395,21 +412,10 @@
       <p>He was the infrastructure.</p>
       <p>The vision, the relationships, the programming, the funding network, and much of the institutional knowledge lived in and through him. When he passed, the organization didn&#8217;t simply lose its leader. It lost the center that held everything together.</p>
       <p>I found myself navigating a responsibility I had never anticipated: helping to carry forward a cultural legacy while simultaneously learning what it takes to sustain one.</p>
-      <p>That experience changed me.</p>
       <p>It revealed the gap between cultural vision and organizational capacity. It taught me that talent, passion, and purpose alone are not enough. The work itself must be supported by structures capable of carrying it forward.</p>
       <p>I was grieving. I felt unprepared.</p>
       <p>Yet I was entrusted with something larger than myself.</p>
       <p>And I built.</p>
-      <p>More than two decades later, the story came full circle.</p>
-      <p>In 2024, through O.Y.A. Strategies, I partnered with Kiazi Malonga of Malonga Music and Muisi-kongo Malonga of Fua Dia Kongo on Embrace Kongo — an inaugural ten-day cultural immersion initiative rooted in the very lineage that first shaped my life.</p>
-      <p>This time, I returned in a different role.</p>
-      <p>Not as a student.</p>
-      <p>Not as a performer.</p>
-      <p>But as a builder.</p>
-      <p>Working alongside the next generation of leadership, I helped strengthen operations, steward partnerships, and develop the infrastructure needed to support the work as it evolved.</p>
-      <p>That experience was more than a project.</p>
-      <p>It was a reminder that legacy is not what we preserve.</p>
-      <p>It is what we prepare others to carry forward.</p>
     </div>
     <div class="aside-block">
       <div class="callout-box">
@@ -418,12 +424,16 @@
       </div>
       <div>
         <div class="pull-stat">
+          <div class="pull-number" style="color:var(--orange);">1995</div>
+          <div class="pull-label">Master workshop at City College of San Francisco. The beginning.</div>
+        </div>
+        <div class="pull-stat">
           <div class="pull-number" style="color:var(--green);">1997</div>
-          <div class="pull-label">Joined Fua Dia Congo. Became Malonga&#8217;s prot&eacute;g&eacute;.</div>
+          <div class="pull-label">Became a performing arts member of Fua Dia Kongo Repertory Kongolese Dance Company.</div>
         </div>
         <div class="pull-stat">
           <div class="pull-number" style="color:var(--purple);">2003</div>
-          <div class="pull-label">Malonga passes. Assumed Managing Director. O.Y.A. Strategies takes form.</div>
+          <div class="pull-label">Assumed the role of Managing Director of Fua Dia Kongo.</div>
         </div>
       </div>
     </div>
@@ -448,28 +458,62 @@
   <div class="section-label">The Work</div>
   <div class="two-col two-col-flip">
     <div class="aside-block">
+      <div class="callout-box">
+        <div class="callout-box-label">On structure</div>
+        <div class="callout-box-text">&#8220;Resources follow structure. Funding. Partnerships. Talent. Trust. All of it.&#8221;</div>
+      </div>
       <div>
         <div class="pull-stat">
-          <div class="pull-number">20+</div>
-          <div class="pull-label">Years inside cultural organizations, alongside founders and cultural leaders</div>
+          <div class="pull-number" style="color:var(--green);">2011</div>
+          <div class="pull-label">Flowtown411 — professional arts services initiative launched with community colleagues</div>
         </div>
         <div class="pull-stat">
-          <div class="pull-number">1</div>
-          <div class="pull-label">Client at a time. Every engagement full depth, no shortcuts.</div>
+          <div class="pull-number" style="color:var(--purple);">18 yrs</div>
+          <div class="pull-label">With Cirque Mechanics — Touring Production Stage Manager to Director of Production</div>
         </div>
         <div class="pull-stat">
-          <div class="pull-number">30</div>
-          <div class="pull-label">Days. One Sprint. Designed to produce what lasts.</div>
+          <div class="pull-number" style="color:var(--orange);">2024</div>
+          <div class="pull-label">O.Y.A. Strategies — the work finds its name</div>
         </div>
+      </div>
+      <div class="callout-box">
+        <div class="callout-box-label">On the work</div>
+        <div class="callout-box-text">&#8220;I build what can hold the work.&#8221;</div>
       </div>
     </div>
     <div class="body-copy">
       <h2>The gap I kept<br>seeing.</h2>
-      <p>In 2011, I launched Flowtown411 — a Professional Arts Service Initiative producing workshops on arts administration, touring and production management, theatrical design, and funding development. I was already watching the same gap appear across the Bay Area arts ecosystem: brilliant vision, deep community commitment, fragile infrastructure. I was building tools to close it before I had a name for what I was doing.</p>
-      <p>Those same years, I was deep into what would become sixteen years with Cirque Mechanics — touring internationally as Production Stage Manager and ultimately Director of Production across 50+ performances in North America, Europe, Asia, and Africa. There I witnessed what becomes possible when structure, trust, and accountability are fully aligned: roles clearly defined, authority assigned rather than assumed, decisions documented and followed through. What I came to understand changed everything: <em>resources follow structure.</em> And structure only works where trust is built and shared.</p>
-      <p>When I returned to the cultural ecosystem full-time, I could not unsee what I had learned. In 2023, I received the ACTA Living Cultures Grant to document the oral histories and cultural legacy of Tata Pierre Sandor Diabankouezi — master teacher, elder, and keeper of Congolese tradition in the Bay Area. That project, <em>From Whence I Came: Expressions of Congo</em>, became the first production under O.Y.A. Strategies. I also produced the Bon Voyage Fete &amp; Silent Auction — a community campaign that united organizations across Oakland&#8217;s African Dance community and raised the funds to return Tata Sandor home to the Republic of Congo before his passing in February 2025.</p>
-      <p>Closing that gap isn&#8217;t about making the work smaller or more palatable. It&#8217;s about building what was missing — the structure, the systems, and the organizational foundation that allow meaningful work to be held, deepened, and carried across generations. That is what O.Y.A. Strategies is built to do.</p>
-      <p>My core insight, formed over two decades: <strong>burnout is not a people problem. It is a systems and planning problem.</strong> Lack of structure leads to last-minute decisions, inflated costs, invisible labor, and community harm. I solve the systems problem — not the motivation problem.</p>
+      <p>The lesson I learned at Fua Dia Kongo did not stay at Fua Dia Kongo.</p>
+      <p>I began seeing the same pattern repeatedly.</p>
+      <p>Across the Bay Area arts ecosystem, I encountered this reality in many forms — brilliant vision, deep community commitment, and fragile infrastructure. Not just in organizations, but in individual artists, choreographers, and cultural leaders building their own platforms. Each carried extraordinary purpose. Yet too often, the systems needed to sustain that work were either underdeveloped or absent altogether.</p>
+      <p>At first, I thought I was observing isolated challenges.</p>
+      <p>I realized I was witnessing something systemic.</p>
+      <p>In 2011, in partnership with community colleagues, I launched Flowtown411 — a professional arts services initiative focused on arts administration, touring and production management, theatrical design, and funding development. Looking back, I was already building tools to address the problem long before I had language for it.</p>
+      <p>At the same time, I was serving an eighteen-year tenure with Cirque Mechanics — first as Touring Production Stage Manager and later as Director of Production. Touring throughout North America, Europe, and Asia, I experienced a very different operating model.</p>
+      <p>There, I experienced what becomes possible when structure, trust, and accountability are fully aligned.</p>
+      <p>I was trusted to lead. Roles were clearly defined. I had the authority and autonomy to make real-time decisions impacting budgets, timelines, and touring logistics — and the full accountability to follow through.</p>
+      <p>What I came to understand changed everything:</p>
+      <p>Structure is not what follows resources.</p>
+      <p>Resources follow structure.</p>
+      <p>Funding. Partnerships. Talent. Trust.</p>
+      <p>All of it.</p>
+      <p>The challenge was rarely the people.</p>
+      <p>It wasn&#8217;t a lack of talent.</p>
+      <p>It wasn&#8217;t a lack of passion.</p>
+      <p>It wasn&#8217;t a lack of commitment.</p>
+      <p>It was a lack of systems capable of supporting the scale of the vision.</p>
+      <p>Looking back, I realized my work was never limited to producing programs, coordinating events, managing organizations, or syncing logistics.</p>
+      <p>I was designing the conditions that allow meaningful work to endure.</p>
+      <p>The relationships. The leadership pathways. The operational systems. The decision-making structures. The partnerships. The stewardship practices.</p>
+      <p><em>The architecture.</em></p>
+      <p>The work itself may take many forms.</p>
+      <p>My role does not.</p>
+      <p>I build what can hold the work.</p>
+      <p>O.Y.A. Strategies was born from that realization.</p>
+      <p>I design what allows culture to survive its founder.</p>
+      <p>I help cultural leaders, artists, organizations, and institutions build the systems, structures, and pathways that allow meaningful work to endure, evolve, and expand.</p>
+      <p>Because legacy is not what we preserve.</p>
+      <p>It is what we prepare others to carry forward.</p>
     </div>
   </div>
 </section>
@@ -480,9 +524,17 @@
   <div class="two-col">
     <div class="body-copy">
       <h2>The Cultural Stewardship Blueprint&#8482;</h2>
-      <p>Most consultants separate the three things that actually need to move together. My framework integrates them into a single, coherent system — the Cultural Stewardship Blueprint&#8482;.</p>
-      <p>It is the architecture underneath every O.Y.A. engagement. Whether I&#8217;m working with a founder building something new or a cultural director stabilizing decades of existing work, this framework is what makes the output durable. It doesn&#8217;t just document the vision — it builds the vessel the vision travels in.</p>
-      <p>I hold sequence, scale, and human impact simultaneously — something most people in this work are forced to separate. The result is a blueprint that is not just legible to the people inside the work, but to the funders, boards, and inner circles who need to understand and sustain it.</p>
+      <p>Meaningful work rarely struggles because it lacks vision. More often, it struggles because the systems supporting that vision are incomplete. I see this across the cultural ecosystem — in artists building independent practices, creative entrepreneurs growing mission-driven ventures, cultural leaders stewarding communities, and organizations carrying decades of history.</p>
+      <p>Some focus on people but neglect planning.</p>
+      <p>Some focus on planning but neglect succession.</p>
+      <p>Some focus on legacy without addressing the human capacity required to sustain the work today.</p>
+      <p>The Cultural Stewardship Blueprint&#8482; brings these elements together into a single framework:</p>
+      <p>Human Capacity.<br>Structural Planning.<br>Stewardship &amp; Legacy.</p>
+      <p>Each influences the others. When one is overlooked, the work becomes vulnerable. When all three are aligned, the work becomes sustainable.</p>
+      <p>Whether I&#8217;m working with an artist launching a new initiative, a founder building an organization, or an institution stewarding a cultural legacy, the goal remains the same:</p>
+      <p>To build what can hold the work.</p>
+      <p>Not only for today.</p>
+      <p>But for the people who will carry it tomorrow.</p>
     </div>
     <div>
       <div class="framework-item">
@@ -509,26 +561,29 @@
   <div class="section-label">The Vision</div>
   <div class="body-copy" style="max-width: 680px;">
     <h2>Building a field,<br>not a practice.</h2>
-    <p>O.Y.A. is named for Oy&aacute; — the Yoruba orisha of transformation, the force that moves through change, where endings make space for new systems to emerge. My modern interpretation: <em>Optimize Your Assets.</em> Because the asset is not abstract. The asset is your cultural heritage, your living traditions, the community you are stewarding. That is what is worth building for.</p><p>I am not building a personal brand. I am authoring a field — stewardship architecture in arts and culture — and building an institution that will outlive me. O.Y.A. Strategies is the first form that institution takes. It will not be the last.</p>
+    <p>O.Y.A. is named for Oy&aacute; — the Yoruba orisha of transformation, the force that moves through change, where endings make space for new systems to emerge.</p>
+    <p>My modern interpretation: <em>Optimize Your Assets.</em></p>
+    <p>Because the asset is not abstract. The asset is your cultural heritage. Your living traditions. Your knowledge. Your relationships. The community you are stewarding.</p>
+    <p>That is what is worth building for.</p>
+    <p>I help define and advance a field of practice — rooted in cultural stewardship, system design, and legacy building. Every blueprint, every partnership, and every engagement contributes to a growing body of knowledge about how meaningful work can endure, evolve, and be carried forward across generations.</p>
+    <p>O.Y.A. Strategies is the first form that vision takes.</p>
+    <p>It will not be the last.</p>
   </div>
   <div class="phases-grid">
     <div class="phase">
       <div class="phase-label phase-label-1">Phase 01 &nbsp;·&nbsp; Now</div>
       <div class="phase-title">Private Intensives</div>
-      <div class="phase-desc">The O.Y.A. Signature Sprint — 30 days, one client at a time. Full depth, no shortcuts. Building the methodology and the case studies that prove it.</div>
-      <div class="phase-time">2025 &ndash; Present</div>
+      <div class="phase-desc">The O.Y.A. Signature Sprint — 30 days, one client at a time. Deep partnership. Applied Methodology. Real-world Implementation. Building the body of work that proves the model.</div>
     </div>
     <div class="phase">
       <div class="phase-label phase-label-2">Phase 02 &nbsp;·&nbsp; Near</div>
       <div class="phase-title">The Stewardship Circle</div>
-      <div class="phase-desc">An invitation-only cohort for cultural leaders ready to build alongside each other. Peer infrastructure. Shared methodology. A community of practice.</div>
-      <div class="phase-time">6 &ndash; 18 Months</div>
+      <div class="phase-desc">An invitation-only cohort for cultural leaders ready to build alongside each other. Shared methodology. Peer infrastructure. A community of practice.</div>
     </div>
     <div class="phase">
       <div class="phase-label phase-label-3">Phase 03 &nbsp;·&nbsp; Long View</div>
       <div class="phase-title">An Institution</div>
-      <div class="phase-desc">O.Y.A. Strategies as a public-facing institution — with fellows, co-facilitators, and a body of work that can be taught, carried, and built upon by the next generation.</div>
-      <div class="phase-time">The Long View</div>
+      <div class="phase-desc">An institution dedicated to strengthening the people, structures, and stewardship required for cultural work to endure. A place where frameworks can be taught, practices can be refined, and future leaders can learn how to build what can hold the work. A body of knowledge designed to outlast its founder.</div>
     </div>
   </div>
 </section>
@@ -537,7 +592,8 @@
 <div class="cta-band">
   <div class="cta-band-copy">
     <h3>Ready to build what lasts?</h3>
-    <p>Every engagement begins with a conversation. If the work is real and you&#8217;re ready for the depth it takes to sustain it &mdash; let&#8217;s talk.</p>
+    <p>Meaningful work deserves more than passion. It deserves structure, stewardship, a future.</p>
+    <p>If you&#8217;re ready to build what can hold the work &mdash; let&#8217;s begin.</p>
   </div>
   <div class="cta-band-actions">
     <a href="https://calendly.com/oyastrategies/discovery" target="_blank" rel="noopener noreferrer" class="btn-cta-primary">Schedule a Discovery Conversation &rarr;</a>
