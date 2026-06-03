@@ -696,9 +696,9 @@
     gap: 12px;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
-  .footer-left { display: flex; flex-direction: row; align-items: center; gap: 20px; }
   .footer-logo img { height: 80px; width: auto; opacity: 0.7; display: block; }
-  .footer-brand { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; line-height: 1.7; }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .footer-brand { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; white-space: nowrap; }
   .footer-links { display: flex; gap: 24px; }
   .footer-links a {
     font-size: 11px;
@@ -719,10 +719,9 @@
     .archetypes { grid-template-columns: 1fr; }
     .deliverable-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; align-items: flex-start; gap: 20px; }
-    .footer-left { flex-direction: row; align-items: flex-start; gap: 12px; }
+    .footer-right { align-items: flex-start; gap: 6px; }
     .footer-logo img { height: 52px; }
     .footer-brand { font-size: 10.5px; white-space: normal; }
-    .footer-links { margin-left: 64px; }
     .stats-band { padding: 48px 24px; }
     .stats-band-inner { grid-template-columns: 1fr; gap: 32px; }
     .stat-divider { display: none; }
@@ -772,7 +771,7 @@
     </a>
   </div>
   <div class="nav-links">
-    <a href="#about">About</a>
+    <a href="about.html">About</a>
     <a href="#sprint">The Sprint</a>
     <a href="#contact">Contact</a>
     <a href="/diagnostic.html" class="nav-cta">Take the Assessment</a>
@@ -1041,15 +1040,15 @@
 
 <!-- Footer -->
 <footer>
-  <div class="footer-left">
-    <div class="footer-logo">
-      <img id="footer-logo-img" alt="O.Y.A. Strategies">
-    </div>
-    <div class="footer-brand">O.Y.A. Strategies &nbsp;·&nbsp; Janeen Johnson &nbsp;·&nbsp; Cultural Architect &nbsp;·&nbsp; &copy; 2026</div>
+  <div class="footer-logo">
+    <img id="footer-logo-img" alt="O.Y.A. Strategies">
   </div>
-  <div class="footer-links">
-    <a href="mailto:janeen@oyastrategies.com">Email</a>
-    <a href="https://janeenjohnson.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+  <div class="footer-right">
+    <div class="footer-brand">O.Y.A. Strategies &nbsp;·&nbsp; Janeen Johnson &nbsp;·&nbsp; Cultural Architect &nbsp;·&nbsp; &copy; 2026</div>
+    <div class="footer-links">
+      <a href="mailto:janeen@oyastrategies.com">Email</a>
+      <a href="https://janeenjohnson.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>
+    </div>
   </div>
 </footer>
 
